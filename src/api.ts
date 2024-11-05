@@ -6,7 +6,7 @@ export interface Image {
     small: string;
     regular: string;
   };
-  alt_description: string;
+  slug: string;
 }
 
 export interface FetchImagesResponse {
@@ -30,7 +30,7 @@ export const fetchImagesWithTopic = async (
       },
     });
 
-    // Перевірка наявності результатів
+ 
     return response.data.results || [];
   } catch (error) {
     console.error("Не вдалося отримати дані з сервера");

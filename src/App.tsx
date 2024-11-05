@@ -6,11 +6,11 @@ import Loader from './Loader/Loader';
 import ErrorMessage from './ErrorMessage/ErrorMessage';
 import ImageModal from './ImageModal/ImageModal';
 import LoadMoreBtn from './LoadMoreBtn/LoadMoreBtn';
-import fetchImagesWithTopic from './api'; 
+import fetchImagesWithTopic, { Image } from './api'; 
 import { Toaster } from 'react-hot-toast';
 
 const App: React.FC = () => {
-  const [images, setImages] = useState<any[]>([]);
+  const [images, setImages] = useState<Image[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   const [modalIsOpen, setIsOpen] = useState<boolean>(false);

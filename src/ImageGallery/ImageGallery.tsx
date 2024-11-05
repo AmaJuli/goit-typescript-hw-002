@@ -1,17 +1,9 @@
 import ImageCard from "../ImageCard/ImageCard";
 import css from './ImageGallery.module.css';
-
-type ImageItem = {
-  id: string;
-  urls: {
-    small: string;
-    regular: string;
-  };
-  slug: string;
-};
+import { Image } from '../api';
 
 type ImageGalleryProps = {
-  items: ImageItem[];
+  items: Image[];
   onImageClick: (url: string) => void;
 };
 
